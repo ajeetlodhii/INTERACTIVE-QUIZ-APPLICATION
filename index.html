@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a> |
+  
+  <a href="quizr.html">Results</a> |
+  <a href="about.html">About</a> |
+  <a href="leaderboard.html">Leaderboard</a>
+</nav>
+
+<hr>
+
+<main id="quizArea" style="display:none;">
+  <h1>General Knowledge Quiz</h1>
+
+  <form id="quizForm">
+
+    <fieldset id="question1">
+      <legend>Question 1: Multiple Choice</legend>
+      <p>Which planet is known as the "Red Planet"?</p>
+      <input type="radio" id="q1a" name="q1" value="mars">
+      <label for="q1a">Mars</label><br>
+      <input type="radio" id="q1b" name="q1" value="venus">
+      <label for="q1b">Venus</label><br>
+      <input type="radio" id="q1c" name="q1" value="jupiter">
+      <label for="q1c">Jupiter</label><br>
+      <input type="radio" id="q1d" name="q1" value="saturn">
+      <label for="q1d">Saturn</label><br>
+    </fieldset>
+
+    <fieldset id="question2">
+      <legend>Question 2: True or False</legend>
+      <p>The Great Wall of China is visible from space with the naked eye.</p>
+      <input type="radio" id="q2a" name="q2" value="false">
+      <label for="q2a">False</label><br>
+      <input type="radio" id="q2b" name="q2" value="true">
+      <label for="q2b">True</label><br>
+    </fieldset>
+
+    <fieldset id="question3">
+      <legend>Question 3: Text Input</legend>
+      <p>What is the chemical symbol for gold?</p>
+      <input type="text" id="q3" name="q3"><br>
+    </fieldset>
+
+    <fieldset id="question4">
+      <legend>Question 4: Multiple Select</legend>
+      <p>Select the continents that begin with the letter "A".</p>
+      <input type="checkbox" id="q4a" name="q4" value="africa">
+      <label for="q4a">Africa</label><br>
+      <input type="checkbox" id="q4b" name="q4" value="antarctica">
+      <label for="q4b">Antarctica</label><br>
+      <input type="checkbox" id="q4c" name="q4" value="asia">
+      <label for="q4c">Asia</label><br>
+      <input type="checkbox" id="q4d" name="q4" value="europe">
+      <label for="q4d">Europe</label><br>
+    </fieldset>
+
+    <fieldset id="question5">
+      <legend>Question 5: Dropdown</legend>
+      <p>Which ocean is the largest?</p>
+      <select id="q5" name="q5">
+        <option value="atlantic">Atlantic</option>
+        <option value="pacific">Pacific</option>
+        <option value="indian">Indian</option>
+        <option value="arctic">Arctic</option>
+      </select><br>
+    </fieldset>
+
+    <button type="button" onclick="showResults()">Submit Quiz</button>
+    <button type="reset" onclick="resetQuiz()">Reset Quiz</button>
+
+  </form>
+
+  <div id="results" style="display:none;">
+    <h2>Quiz Results</h2>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="finalScore"></p>
+  </div>
+
+</main>
+<button id="startQuiz">Start Quiz</button>
+
+<hr>
+
+<footer>
+  <p>&copy; 2024 Quiz App</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="leaderboard.js"></script>
+</body>
+</html>

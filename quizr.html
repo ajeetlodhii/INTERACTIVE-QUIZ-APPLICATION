@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f5;
+            color: #333;
+        }
+        .results-container {
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .back-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz Results</h1>
+    <div class="results-container">
+        <h2>Your Score:</h2>
+        <p id="finalScore"></p>
+        <button class="back-btn" onclick="goBack()">Back to Quiz</button>
+    </div>
+
+    <script>
+        document.getElementById('finalScore').innerText = 
+            "Your final score is: " + (localStorage.getItem('lastScore') || 'No quiz attempt found.');
+
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

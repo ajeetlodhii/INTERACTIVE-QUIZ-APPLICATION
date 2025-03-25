@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Leaderboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f5;
+            color: #333;
+        }
+        .leaderboard {
+            margin: 20px auto;
+            width: 60%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .leaderboard th {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .leaderboard td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            font-size: 16px;
+        }
+        .leaderboard tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="color: #007bff;">Quiz Leaderboard</h2>
+    <table class="leaderboard">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody id="leaderboardBody">
+            <!-- Leaderboard entries will go here -->
+        </tbody>
+    </table>
+    <button onclick="clearLeaderboard()" style="margin: 20px; padding: 10px; background: red; color: white; border: none; cursor: pointer;">
+        Clear Leaderboard
+    </button>
+
+    <script src="leaderboard.js"></script>
+     
+    </script>
+</body>
+</html>
